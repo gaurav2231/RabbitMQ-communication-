@@ -1,4 +1,4 @@
-package com.kindthegenius.rabbitmqdemo;
+package com.gaurav.rabbitmqdemo;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

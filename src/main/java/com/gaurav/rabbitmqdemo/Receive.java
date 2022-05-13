@@ -1,4 +1,4 @@
-package com.kindthegenius.rabbitmqdemo;
+package com.gaurav.rabbitmqdemo;
 
 import com.rabbitmq.client.*;
 import org.slf4j.Logger;
@@ -12,7 +12,7 @@ import java.util.concurrent.TimeoutException;
 public class Receive {
     static Logger logger = LoggerFactory.getLogger(Receive.class);
 
-    private final static String QUEUE_NAME = "hello";
+    private final static String QUEUE_NAME = "qwerty";
 
     public  static void main(String[] argv)
             throws IOException, TimeoutException {

@@ -1,4 +1,4 @@
-package com.kindthegenius.rabbitmqdemo;
+package com.gaurav.rabbitmqdemo;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
@@ -14,15 +14,21 @@ import java.util.concurrent.TimeoutException;
 public class Send {
     static Logger logger = LoggerFactory.getLogger(Send.class);
 
-    private static String QUEUE_NAME = "hello";
+    private static String QUEUE_NAME = "Minakshi Mishra";
 
     public  static void main(String[] argv) throws IOException, TimeoutException {
         ConnectionFactory factory = new ConnectionFactory();
-        factory.setHost("localhost");
+        factory.setHost("192.168.1.216");  // Praveen
+        factory.setHost("192.168.0.189");  // Minakshi
+
+        factory.setPort(5672);
+        factory.setUsername("gaurav");
+        factory.setPassword("gaurav@123");
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
         channel.queueDeclare(QUEUE_NAME, false,false, false, null);
-        String message = "Welcome to RabbitMQ";
+        String message = "Hayyy Minakshi from Gaurav";
+        
         channel.basicPublish("", QUEUE_NAME, null, message.getBytes("UTF-8"));
         logger.info("[!] Send '" + message + "'");
         channel.close();
