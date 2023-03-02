@@ -14,7 +14,7 @@ import java.util.concurrent.TimeoutException;
 public class Send {
     static Logger logger = LoggerFactory.getLogger(Send.class);
 
-    private static String QUEUE_NAME = "Minakshi Mishra";
+    private static String QUEUE_NAME = "Gaurav Saini";
 
     public  static void main(String[] argv) throws IOException, TimeoutException {
         ConnectionFactory factory = new ConnectionFactory();
