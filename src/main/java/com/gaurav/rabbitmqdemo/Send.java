@@ -27,7 +27,7 @@ public class Send {
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
         channel.queueDeclare(QUEUE_NAME, false,false, false, null);
-        String message = "Hayyy Minakshi from Gaurav";
+        String message = "Hayyy Akshay from Gaurav";
         
         channel.basicPublish("", QUEUE_NAME, null, message.getBytes("UTF-8"));
         logger.info("[!] Send '" + message + "'");
